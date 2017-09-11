@@ -60,12 +60,9 @@ swveg
 plot(swveg)
 ```
 
-```{r example_run, echo = FALSE, results = "hide"}
-library(raster)
-library(snapgrid)
-dev.off()
+```{r example_run, echo = FALSE, results = "hide", eval = FALSE}
+# changed to not evaluated
 png("man/figures/README-example-1.png", width = 600, height = 500)
-par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
 plot(swveg)
 dev.off()
 ```
