@@ -17,14 +17,20 @@ knitr::opts_chunk$set(
 [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snapgrid/master.svg)](https://codecov.io/github/leonawicz/snapgrid?branch=master)
 
 The `snapgrid` package is a data package in the SNAPverse collection of R packages. It contains a number of convenient `raster`
-objects commonly used at SNAP.
+objects commonly used at SNAP. 
+`snapgrid` contains a collection of rasterized maps focused on Alaska and Canada, including vegetation input for the ALFRESCO wildfire model, 
+fire management options map layers, domain template layers for the Alaska "statewide" classic ALFRESCO domain, 
+and 1-km ALFRESCO and 2-km climate templates for the Alaska/western Canada domain.
 
 ## Available maps
 
 The following maps are included in the package:
 
+* `akcan2km`: Alaska/western Canada 2-km downscaled climate domain template layer.
+* `akcan1km`: Alaska/western Canada 1-km ALFRESCO domain template layer.
+* `ak1km`: "Statewide" classic ALFRESCO domain template layer.
 * `swveg`: Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.
-* `swfmoBuffers`: Statewide fire management options buffered zone map layer for the union of 15-km buffered modified, full and critical management areas.
+* `swfmoBuffer`: Statewide fire management options buffered zone map layer for the union of 15-km buffered modified, full and critical management areas.
 * `swfmoRatios`: Statewide fire management options ratios map layer.
 
 ## Installation
@@ -72,4 +78,4 @@ dev.off()
 Cleaning and curating is kept to a minimum for this package. Included raster layers cover multiple spatial domains,
 namely Alaska and Alaska/western Canada, but they all share the NAD83 Alaska Albers Equal Area Conic projection in common:
 
-`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs `
+`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs`
