@@ -21,3 +21,8 @@ Suggests:
     covr,
     snapmeta
 VignetteBuilder: knitr
+Imports: 
+    raster
+Remotes:
+    leonawicz/snapmeta
+RoxygenNote: 6.0.1
