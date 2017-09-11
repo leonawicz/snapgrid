@@ -11,8 +11,11 @@
 #'
 #' There following maps are available:
 #' \describe{
+#' \item{\code{akcan2km}}{Alaska/western Canada 2-km downscaled climate domain template layer.}
+#' \item{\code{akcan1km}}{Alaska/western Canada 1-km ALFRESCO domain template layer.}
+#' \item{\code{ak1km}}{"Statewide" classic ALFRESCO domain template layer.}
 #' \item{\code{swveg}}{Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.}
-#' \item{\code{swfmoBuffers}}{Statewide fire management options buffered zone map layer for the union of 15-km buffered modified, full and critical management areas.}
+#' \item{\code{swfmoBuffer}}{Statewide fire management options buffered zone map layer for the union of 15-km buffered modified, full and critical management areas.}
 #' \item{\code{swfmoRatios}}{Statewide fire management options ratios map layer.}
 #' }
 #'
@@ -20,9 +23,45 @@
 #' @name snapgrid
 NULL
 
+#' Alaska/western Canada 2-km downscaled climate template raster layer.
+#'
+#' A raster layer of the 2-km Alaska/western Canada PRISM extent used for the SNAP climate downscaling spatial domain.
+#' All non-NA values are set to 1.
+#'
+#' @format A RasterLayer.
+"akcan2km"
+
+#' Alaska/western Canada 1-km ALFRESCO template raster layer.
+#'
+#' A raster layer of the 1-km Alaska/western Canada PRISM extent used for the SNAP climate downscaling domain, resampled to the 1-km ALFRESCO model spatial domain.
+#' All non-NA values are set to 1.
+#'
+#' @format A RasterLayer.
+"akcan1km"
+
+#' Alaska 1-km ALFRESCO template raster layer.
+#'
+#' A raster layer of the 1-km Alaska classic "statewide" ALFRESCO model spatial domain.
+#' All non-NA values are set to 1.
+#'
+#' @format A RasterLayer.
+"ak1km"
+
 #' Alaska Statewide ALFRESCO vegetation input.
 #'
-#' A raster layer of the ALFRESCO vegetation input conforming to the classic "statewide" domain.
+#' A raster layer of the ALFRESCO vegetation input conforming to the classic "statewide" spatial domain.
+#' The ID codes for the raster layer are as follows:
+#'
+#' \describe{
+#' \item{\code{0}}{No vegetation/non-burnable area, e.g. mountain or water body}
+#' \item{\code{1}}{Alpine tundra}
+#' \item{\code{2}}{Black spruce}
+#' \item{\code{3}}{White spruce}
+#' \item{\code{4}}{Deciduous tree species}
+#' \item{\code{5}}{Shrub tundra}
+#' \item{\code{6}}{Graminoid tundra}
+#' \item{\code{7}}{Wetland tundra}
+#' }
 #'
 #' @format A RasterLayer.
 "swveg"
@@ -30,18 +69,20 @@ NULL
 #' Alaska Statewide ALFRESCO fire management options buffered zone.
 #'
 #' A raster layer of the ALFRESCO fire management options 15-km buffered zone for the union of modified, full and critical management areas,
-#' conforming to the classic "statewide" domain.
+#' conforming to the classic "statewide" spatial domain. All non-NA values are 1.
 #'
 #' @format A RasterLayer.
-"swfmoBuffers"
+"swfmoBuffer"
 
 #' Alaska Statewide ALFRESCO fire management options ratios.
 #'
-#' A raster layer of the ALFRESCO fire management options 15-km buffered zone ratios conforming to the classic "statewide" domain.
+#' A raster layer of the ALFRESCO fire management options 15-km buffered zone ratios conforming to the classic "statewide" spatial domain.
 #' All values are greater than or equal to one. Grid cells equal to one do not experience fire suppression in ALFRESCO.
 #' ALl other cells experience fire suppression to a degree based on their relative ratios.
 #' The mechanism for this in ALFRESCO is that this map layer is used to weight the fire sensitivity and/or ignition factor ALFRESCO
 #' input geotiffs.
+#'
+#' Ratios for modified, full and critical zones are 1.25, 1.5 and 1.75, respectively. All other areas are set to 1.0.
 #'
 #' @format A RasterLayer.
 "swfmoRatios"
