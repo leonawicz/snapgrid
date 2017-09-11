@@ -68,8 +68,17 @@ NULL
 
 #' Alaska Statewide ALFRESCO fire management options buffered zone.
 #'
-#' A raster layer of the ALFRESCO fire management options 15-km buffered zone for the union of modified, full and critical management areas,
-#' conforming to the classic "statewide" spatial domain. All non-NA values are 1.
+#' A raster layer of the ALFRESCO fire management options using 15-km buffered management areas,
+#' conforming to the classic "statewide" spatial domain.
+#' The ID codes for the raster layer are as follows:
+#'
+#' \describe{
+#' \item{\code{0}}{No fire management}
+#' \item{\code{1}}{Limited}
+#' \item{\code{2}}{Modified}
+#' \item{\code{3}}{Critical}
+#' \item{\code{4}}{Full}
+#' }
 #'
 #' @format A RasterLayer.
 "swfmoBuffer"
