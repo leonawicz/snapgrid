@@ -46,8 +46,8 @@ navbar:
           href: http://leonawicz.github.io/snapfire
         - text: "snappoly"
           href: http://leonawicz.github.io/snappoly
-        - text: "snapmaps"
-          href: http://leonawicz.github.io/snapmaps
+        - text: "snapgrid"
+          href: http://leonawicz.github.io/snapgrid
         - text: "snapdist"
           href: http://leonawicz.github.io/snapdist
         - text: "--------"
