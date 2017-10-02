@@ -105,3 +105,22 @@ NULL
 #'
 #' @format A RasterLayer.
 "swflam"
+
+#' Basic metadata for all data sets in snapgrid
+#'
+#' This function returns a data frame with basic meta data for all data sets in \code{snapgrid}.
+#' This includes data object names, spatial domain, spatial resolution, and short description.
+#'
+#' @return a data frame.
+#' @export
+#'
+#' @examples
+#' snapgrids()
+snapgrids <- function(){
+  objects <- c("akcan2km", "akcan1km", "ak1km", "swveg", "swfmoBuffer", "swfmoRatios", "swflam")
+  dom <- c("ak", "akcan")[c(2, 2, rep(1, 5))]
+  res <- purrr::map_int(objects, ~as.integer(raster::res(get(.x))[1]))
+  desc <- c(rep("Domain mask", 3), "Vegetation class IDs", "Fire mgmt buffers",
+    "FMO suppression ratios", "GBM flammability mask")
+  tibble::data_frame(data = objects, domain = dom, res = res, description = desc)
+}
