@@ -16,6 +16,9 @@ reference:
 - title: Package
   contents:
   - snapgrid
+- title: Basic metadata
+  contents:
+  - snapgrids
 - title: Template rasters
   contents:
   - akcan2km
