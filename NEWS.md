@@ -1,8 +1,10 @@
-# snapgrid 0.2.0 (Release date: 2017-10-02)
+# snapgrid 0.3.0 (Release date: 2017-10-02)
 
 * Added gbm flammability mask layer for statewide ALFRESCO domain.
 * Updated proj4 string to match that used in `snappoly` package.
 * Updated documentation.
+* Added metadata function, `snapgrids`.
+* Added unit tests.
 
 # snapgrid 0.1.0
 
