@@ -17,7 +17,7 @@
 #' \item{\code{swveg}}{Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.}
 #' \item{\code{swfmoBuffer}}{Statewide fire management options map layer using 15-km buffered management areas.}
 #' \item{\code{swfmoRatios}}{Statewide fire management options ratios map layer.}
-#' \item{\code{swflam}}{Statewide gbm flammability mask map layer.}
+#' \item{\code{swflam}}{Statewide GBM vegetation-mediated, climate-driven landscape flammability mask map layer.}
 #' }
 #'
 #' @docType package
@@ -97,7 +97,7 @@ NULL
 #' @format A RasterLayer.
 "swfmoRatios"
 
-#' Alaska Statewide ALFRESCO gbm flammability mask layer.
+#' GBM vegetation-mediated climate-driven landscape flammability.
 #'
 #' A raster layer of the ALFRESCO gbm (gradient boosting modeled) vegetation-mediated climate-driven landscape flammability.
 #' This map describes the spatial domain of the flammable region for the statewide ALFRESCO runs for which this layer is used.

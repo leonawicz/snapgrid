@@ -24,6 +24,6 @@ There following maps are available:
 \item{\code{swveg}}{Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.}
 \item{\code{swfmoBuffer}}{Statewide fire management options map layer using 15-km buffered management areas.}
 \item{\code{swfmoRatios}}{Statewide fire management options ratios map layer.}
-\item{\code{swflam}}{Statewide gbm flammability mask map layer.}
+\item{\code{swflam}}{Statewide GBM vegetation-mediated, climate-driven landscape flammability mask map layer.}
 }
 }

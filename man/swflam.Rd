@@ -3,7 +3,7 @@
 \docType{data}
 \name{swflam}
 \alias{swflam}
-\title{Alaska Statewide ALFRESCO gbm flammability mask layer.}
+\title{GBM vegetation-mediated climate-driven landscape flammability.}
 \format{A RasterLayer.}
 \usage{
 swflam
