@@ -24,6 +24,9 @@ reference:
 - title: Vegetation
   contents:
   - swveg
+- title: Flammability
+  contents:
+  - swflam
 - title: Fire management options
   contents:
   - swfmoBuffer
