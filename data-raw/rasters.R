@@ -11,6 +11,7 @@ for(i in ids){
   x <- get(i)
   if(i %in% c("akcan2km", "akcan1km", "ak1km", "swflam")) x[!is.na(x)] <- 1L
   projection(x) <- proj4
+  names(x) <- i
   assign(i, x)
 }
 purrr::map(ids, ~(projection(get(.x)))) # check all AK Albers
