@@ -46,7 +46,7 @@ swveg
 #> extent      : -656204.4, 717795.6, 940439.8, 2390440  (xmin, xmax, ymin, ymax)
 #> coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0 
 #> data source : in memory
-#> names       : alf2005.cavm.merged.030212 
+#> names       : swveg 
 #> values      : 0, 7  (min, max)
 ```
 
