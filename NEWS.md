@@ -1,3 +1,8 @@
+# snapgrid 0.3.1 (Release date: 2017-10-04)
+
+* Added introduction vignette content.
+* Update data sets, removing old names taken from original raw source data templates.
+
 # snapgrid 0.3.0 (Release date: 2017-10-03)
 
 * Added gbm flammability mask layer for statewide ALFRESCO domain.
@@ -5,7 +10,6 @@
 * Updated documentation.
 * Added metadata function, `snapgrids`.
 * Added unit tests.
-* Added introduction vignette content.
 
 # snapgrid 0.1.0
 
