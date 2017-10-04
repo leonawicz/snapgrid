@@ -37,7 +37,7 @@ This will provide more information such as the vegetation key for the integer ID
 
 Here is a basic plot of the vegetation layer using the `raster` package.
 
-```{r plot, echo=FALSE}
+```{r library, echo=FALSE}
 library(raster)
 ```
 
@@ -46,8 +46,7 @@ library(raster)
 plot(swveg)
 ```
 
-```{r plot_run, echo = FALSE, results = "hide", eval = FALSE}
-# changed to not evaluated
+```{r plot_run, echo = FALSE, results = "hide"}
 png("README-example-1b.png", width = 600, height = 500)
 plot(swveg)
 dev.off()
@@ -60,8 +59,8 @@ dev.off()
 Try some other `raster` functions on the vegetation layer.
 
 ```{r info}
-extent(aklcc)
-projection(aklcc)
+extent(swveg)
+projection(swveg)
 ```
 
 In addition to `extent`, the functions `xmin`, `xmax`, `ymin` and `ymax` are available for individual boundary values. The Alaska Albers equal area conic projection is shared across all data sets in `snapgrid`. This is also consistent with data sets in the `snappoly` package.
@@ -95,7 +94,7 @@ If the two maps were in different projections, `projectRaster` could be used ins
 In either case, the result can be used in the subsequent call to `mask`.
 
 ```{r resample}
-mask(resample(akcan1km, ak1km))
+mask(resample(akcan1km, ak1km), ak1km)
 ```
 
 Other related functions include `aggregate` and `disaggregate`.
