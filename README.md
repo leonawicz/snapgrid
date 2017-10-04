@@ -38,21 +38,20 @@ Data packages in the SNAPverse can be loaded on their own, though it is more typ
 Data sets from the above list can immediately be referred to directly once snappoly is loaded. To access documentation on the package from R, use `?snapgrid`, or for a data set for example, `?swveg`.
 
 ``` r
-library(raster)
 library(snapgrid)
 swveg
 #> class       : RasterLayer 
 #> dimensions  : 1450, 1374, 1992300  (nrow, ncol, ncell)
 #> resolution  : 1000, 1000  (x, y)
 #> extent      : -656204.4, 717795.6, 940439.8, 2390440  (xmin, xmax, ymin, ymax)
-#> coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs +towgs84=0,0,0 
+#> coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0 
 #> data source : in memory
 #> names       : alf2005.cavm.merged.030212 
 #> values      : 0, 7  (min, max)
 ```
 
 ``` r
-plot(swveg)
+raster::plot(swveg)
 ```
 
 <p style="text-align:center;">

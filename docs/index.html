@@ -214,18 +214,17 @@ devtools::<span class="kw">install_github</span>(<span class="st">"leonawicz/sna
 <a href="#usage" class="anchor"></a>Usage</h2>
 <p>Data packages in the SNAPverse can be loaded on their own, though it is more typical to load data from a data package in the context of using the <code>snapfuns</code> package, which provides a collection of functions that cater specifically to manipulating, analyzing and plotting SNAP data sets. This is relatively boilerplate and is mentioned for context, but for this package it is not that necessary.</p>
 <p>Data sets from the above list can immediately be referred to directly once snappoly is loaded. To access documentation on the package from R, use <code><a href="reference/snapgrid.html">?snapgrid</a></code>, or for a data set for example, <code><a href="reference/swveg.html">?swveg</a></code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(raster)
-<span class="kw">library</span>(snapgrid)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(snapgrid)
 swveg
 <span class="co">#&gt; class       : RasterLayer </span>
 <span class="co">#&gt; dimensions  : 1450, 1374, 1992300  (nrow, ncol, ncell)</span>
 <span class="co">#&gt; resolution  : 1000, 1000  (x, y)</span>
 <span class="co">#&gt; extent      : -656204.4, 717795.6, 940439.8, 2390440  (xmin, xmax, ymin, ymax)</span>
-<span class="co">#&gt; coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs +towgs84=0,0,0 </span>
+<span class="co">#&gt; coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0 </span>
 <span class="co">#&gt; data source : in memory</span>
 <span class="co">#&gt; names       : alf2005.cavm.merged.030212 </span>
 <span class="co">#&gt; values      : 0, 7  (min, max)</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(swveg)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">raster::<span class="kw">plot</span>(swveg)</code></pre></div>
 <p style="text-align:center;">
 <img src="reference/figures/README-example-1.png"></p>
 </div>
