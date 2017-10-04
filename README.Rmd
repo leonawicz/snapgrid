@@ -52,13 +52,12 @@ Data sets from the above list can immediately be referred to directly once snapp
 To access documentation on the package from R, use `?snapgrid`, or for a data set for example, `?swveg`.
 
 ```{r example}
-library(raster)
 library(snapgrid)
 swveg
 ```
 
 ```{r example2, eval = FALSE}
-plot(swveg)
+raster::plot(swveg)
 ```
 
 ```{r example_run, echo = FALSE, results = "hide", eval = FALSE}
