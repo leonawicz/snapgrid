@@ -19,13 +19,10 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    covr,
-    snapmeta
+    covr
 VignetteBuilder: knitr
 Imports: 
     raster,
     purrr,
     tibble
-Remotes:
-    leonawicz/snapmeta
 RoxygenNote: 6.0.1
