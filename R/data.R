@@ -15,8 +15,8 @@
 #' \item{\code{akcan1km}}{Alaska/western Canada 1-km ALFRESCO domain template layer.}
 #' \item{\code{ak1km}}{"Statewide" classic ALFRESCO domain template layer.}
 #' \item{\code{swveg}}{Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.}
-#' \item{\code{swfmoBuffer}}{Statewide fire management options map layer using 15-km buffered management areas.}
-#' \item{\code{swfmoRatios}}{Statewide fire management options ratios map layer.}
+#' \item{\code{swfmo}}{Statewide fire management options zones map layer.}
+#' \item{\code{swratios}}{Statewide fire management options zone ratios map layer.}
 #' \item{\code{swflam}}{Statewide GBM vegetation-mediated, climate-driven landscape flammability mask map layer.}
 #' }
 #'
@@ -67,9 +67,9 @@ NULL
 #' @format A RasterLayer.
 "swveg"
 
-#' Alaska Statewide ALFRESCO fire management options buffered zone.
+#' Alaska Statewide ALFRESCO fire management options zones.
 #'
-#' A raster layer of the ALFRESCO fire management options using 15-km buffered management areas,
+#' A raster layer of the ALFRESCO fire management option zones,
 #' conforming to the classic "statewide" spatial domain.
 #' The ID codes for the raster layer are as follows:
 #'
@@ -79,23 +79,24 @@ NULL
 #' \item{\code{2}}{Modified}
 #' \item{\code{3}}{Critical}
 #' \item{\code{4}}{Full}
+#' \item{\code{4}}{Other}
 #' }
 #'
 #' @format A RasterLayer.
-"swfmoBuffer"
+"swfmo"
 
-#' Alaska Statewide ALFRESCO fire management options ratios.
+#' Alaska Statewide ALFRESCO fire management options zone ratios.
 #'
-#' A raster layer of the ALFRESCO fire management options 15-km buffered zone ratios conforming to the classic "statewide" spatial domain.
+#' A raster layer of the ALFRESCO fire management options zone ratios conforming to the classic "statewide" spatial domain.
 #' All values are greater than or equal to one. Grid cells equal to one do not experience fire suppression in ALFRESCO.
 #' ALl other cells experience fire suppression to a degree based on their relative ratios.
 #' The mechanism for this in ALFRESCO is that this map layer is used to weight the fire sensitivity and/or ignition factor ALFRESCO
 #' input geotiffs.
 #'
-#' Ratios for modified, full and critical zones are 1.25, 1.5 and 1.75, respectively. All other areas are set to 1.0.
+#' Ratios for full and critical zones are 1.5 and 1.75, respectively. All other areas are set to 1.0.
 #'
 #' @format A RasterLayer.
-"swfmoRatios"
+"swratios"
 
 #' GBM vegetation-mediated climate-driven landscape flammability.
 #'
@@ -117,10 +118,10 @@ NULL
 #' @examples
 #' snapgrids()
 snapgrids <- function(){
-  objects <- c("akcan2km", "akcan1km", "ak1km", "swveg", "swfmoBuffer", "swfmoRatios", "swflam")
+  objects <- c("akcan2km", "akcan1km", "ak1km", "swveg", "swfmo", "swratios", "swflam")
   dom <- c("ak", "akcan")[c(2, 2, rep(1, 5))]
   res <- purrr::map_int(objects, ~as.integer(raster::res(get(.x))[1]))
-  desc <- c(rep("Domain mask", 3), "Vegetation class IDs", "Fire mgmt buffers",
+  desc <- c(rep("Domain mask", 3), "Vegetation class IDs", "Fire mgmt options (FMO)",
     "FMO suppression ratios", "GBM flammability mask")
   tibble::data_frame(data = objects, domain = dom, res = res, description = desc)
 }
