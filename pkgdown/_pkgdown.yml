@@ -32,8 +32,8 @@ reference:
   - swflam
 - title: Fire management options
   contents:
-  - swfmoBuffer
-  - swfmoRatios
+  - swfmo
+  - swratios
 
 navbar:
   type: inverse
