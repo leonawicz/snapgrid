@@ -1,5 +1,5 @@
 Package: snapgrid
-Version: 0.3.1
+Version: 0.3.2
 Title: Common SNAP Geographic Raster Layers
 Description: The snapgrid package is a data package in the SNAPverse collection of R packages.
     It provides several geographic raster layer objects.

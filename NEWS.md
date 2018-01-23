@@ -1,3 +1,8 @@
+# snapgrid 0.3.2 (Release date: 2017-01-23)
+
+* Add standard FMO map and remove buffered FMO map. Change name from `swfmoBuffer` to `swfmo`.
+* Update map and change name from `swfmoRatios` to `swratios`.
+
 # snapgrid 0.3.1 (Release date: 2017-10-04)
 
 * Added introduction vignette content.
