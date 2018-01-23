@@ -106,7 +106,7 @@ For example, arithmetic operators, `+, -, *, /, %%`, can be applied to multiple 
 Many other functions can also be applied directly. Here are a couple functions applied to a single raster layer.
 
 ```{r stats}
-cellStats(swfmoRatios, mean)
+cellStats(swratios, mean)
 freq(swveg)
 ```
 

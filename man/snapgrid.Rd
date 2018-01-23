@@ -22,8 +22,8 @@ There following maps are available:
 \item{\code{akcan1km}}{Alaska/western Canada 1-km ALFRESCO domain template layer.}
 \item{\code{ak1km}}{"Statewide" classic ALFRESCO domain template layer.}
 \item{\code{swveg}}{Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.}
-\item{\code{swfmoBuffer}}{Statewide fire management options map layer using 15-km buffered management areas.}
-\item{\code{swfmoRatios}}{Statewide fire management options ratios map layer.}
+\item{\code{swfmo}}{Statewide fire management options zones map layer.}
+\item{\code{swratios}}{Statewide fire management options zone ratios map layer.}
 \item{\code{swflam}}{Statewide GBM vegetation-mediated, climate-driven landscape flammability mask map layer.}
 }
 }

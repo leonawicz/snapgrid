@@ -30,8 +30,8 @@ The following maps are included in the package:
 * `akcan1km`: Alaska/western Canada 1-km ALFRESCO domain template layer.
 * `ak1km`: "Statewide" classic ALFRESCO domain template layer.
 * `swveg`: Vegation map layer for the classic "statewide" ALFRESCO model spatial domain.
-* `swfmoBuffer`: Statewide fire management options map layer using 15-km buffered management areas.
-* `swfmoRatios`: Statewide fire management options ratios map layer.
+* `swfmo`: Statewide fire management options zones map layer.
+* `swratios`: Statewide fire management options zone ratios map layer.
 * `swflam`: Statewide GBM vegetation-mediated, climate-driven landscape flammability mask map layer.
 
 ## Installation
