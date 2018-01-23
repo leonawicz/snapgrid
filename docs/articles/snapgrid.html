@@ -183,15 +183,15 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(snapgrid)
 <span class="kw"><a href="../reference/snapgrids.html">snapgrids</a></span>()
 <span class="co">#&gt; # A tibble: 7 x 4</span>
-<span class="co">#&gt;   data        domain   res description           </span>
-<span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;                 </span>
-<span class="co">#&gt; 1 akcan2km    akcan   2000 Domain mask           </span>
-<span class="co">#&gt; 2 akcan1km    akcan   1000 Domain mask           </span>
-<span class="co">#&gt; 3 ak1km       ak      1000 Domain mask           </span>
-<span class="co">#&gt; 4 swveg       ak      1000 Vegetation class IDs  </span>
-<span class="co">#&gt; 5 swfmoBuffer ak      1000 Fire mgmt buffers     </span>
-<span class="co">#&gt; 6 swfmoRatios ak      1000 FMO suppression ratios</span>
-<span class="co">#&gt; 7 swflam      ak      1000 GBM flammability mask</span></code></pre></div>
+<span class="co">#&gt;   data     domain   res description            </span>
+<span class="co">#&gt;   &lt;chr&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;                  </span>
+<span class="co">#&gt; 1 akcan2km akcan   2000 Domain mask            </span>
+<span class="co">#&gt; 2 akcan1km akcan   1000 Domain mask            </span>
+<span class="co">#&gt; 3 ak1km    ak      1000 Domain mask            </span>
+<span class="co">#&gt; 4 swveg    ak      1000 Vegetation class IDs   </span>
+<span class="co">#&gt; 5 swfmo    ak      1000 Fire mgmt options (FMO)</span>
+<span class="co">#&gt; 6 swratios ak      1000 FMO suppression ratios </span>
+<span class="co">#&gt; 7 swflam   ak      1000 GBM flammability mask</span></code></pre></div>
 </div>
 <div id="print-summary" class="section level2">
 <h2 class="hasAnchor">
@@ -281,8 +281,8 @@ b
 <h2 class="hasAnchor">
 <a href="#statistics" class="anchor"></a>Statistics</h2>
 <p>Without coercing raster layers to another type of object, many other common operations can be performed on them. For example, arithmetic operators, <code>+, -, *, /, %%</code>, can be applied to multiple rasters, as can logic operators, <code>&gt;, &lt;, ==, !=</code>, and more. Many other functions can also be applied directly. Here are a couple functions applied to a single raster layer.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cellStats</span>(swfmoRatios, mean)
-<span class="co">#&gt; [1] 1.334467</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cellStats</span>(swratios, mean)
+<span class="co">#&gt; [1] 1.077797</span>
 <span class="kw">freq</span>(swveg)
 <span class="co">#&gt;       value  count</span>
 <span class="co">#&gt;  [1,]     0 259505</span>

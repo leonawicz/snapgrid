@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alaska Statewide ALFRESCO fire management options ratios. — swfmoRatios â€¢ snapgrid</title>
+<title>Alaska Statewide ALFRESCO fire management options zones. — swfmo â€¢ snapgrid</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -194,18 +194,16 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Alaska Statewide ALFRESCO fire management options ratios.</h1>
+    <h1>Alaska Statewide ALFRESCO fire management options zones.</h1>
     </div>
 
     
-    <p>A raster layer of the ALFRESCO fire management options 15-km buffered zone ratios conforming to the classic "statewide" spatial domain.
-All values are greater than or equal to one. Grid cells equal to one do not experience fire suppression in ALFRESCO.
-ALl other cells experience fire suppression to a degree based on their relative ratios.
-The mechanism for this in ALFRESCO is that this map layer is used to weight the fire sensitivity and/or ignition factor ALFRESCO
-input geotiffs.</p>
+    <p>A raster layer of the ALFRESCO fire management option zones,
+conforming to the classic "statewide" spatial domain.
+The ID codes for the raster layer are as follows:</p>
     
 
-    <pre class="usage"><span class='no'>swfmoRatios</span></pre>
+    <pre class="usage"><span class='no'>swfmo</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -213,7 +211,14 @@ input geotiffs.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Ratios for modified, full and critical zones are 1.25, 1.5 and 1.75, respectively. All other areas are set to 1.0.</p>
+    <dl class='dl-horizontal'>
+<dt><code>0</code></dt><dd><p>No fire management</p></dd>
+<dt><code>1</code></dt><dd><p>Limited</p></dd>
+<dt><code>2</code></dt><dd><p>Modified</p></dd>
+<dt><code>3</code></dt><dd><p>Critical</p></dd>
+<dt><code>4</code></dt><dd><p>Full</p></dd>
+<dt><code>4</code></dt><dd><p>Other</p></dd>
+</dl>
     
 
   </div>
