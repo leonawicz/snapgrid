@@ -5,6 +5,11 @@ snapgrid
 
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snapgrid.svg?branch=master)](https://travis-ci.org/leonawicz/snapgrid) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snapgrid?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snapgrid) [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snapgrid/master.svg)](https://codecov.io/github/leonawicz/snapgrid?branch=master)
 
+SNAPverse R package ecosystem development frozen.
+-------------------------------------------------
+
+*Development of the SNAPverse R package ecosystem has been frozen indefinitely. This project was never directly funded. I began it out of personal interest, but no longer work for SNAP. It will remain archived here for historical reference.*
+
 The `snapgrid` package is a data package in the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. It contains a number of convenient `raster` objects commonly used at SNAP. `snapgrid` contains a collection of rasterized maps focused on Alaska and Canada, including vegetation input for the ALFRESCO wildfire model, fire management options map layers, domain template layers for the Alaska "statewide" classic ALFRESCO domain, and 1-km ALFRESCO and 2-km climate templates for the Alaska/western Canada domain.
 
 Available maps
